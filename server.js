@@ -33,7 +33,5 @@ app.use('/css/material.min.css', express.static(__dirname + '/node_modules/mater
 app.use(require('./controllers'))
 
 // Tell Express on which port to listen.
-var port = Number(process.env.PORT || 8080)
-app.listen(port, function() { 
-  console.log('listening on port ' + port)
-})
+var port = process.env.PORT || 3000
+app.listen(port, () => console.log(`server is currently running on ${port}`) )
